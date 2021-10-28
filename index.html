@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Attack on Titan Wiki</title>
+</head>
+<style>
+    :root{
+        --naudo: #681318;
+        --domau: #d83627;
+        --trangxam: #dedede;
+    }
+    *{/*reset css*/
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    html{
+        background: black;
+        width: 1280px;
+        font-family:sans-serif;
+        font-size: 16px;
+    }
+    body{
+        width:1182px;
+        margin: 0px auto;
+        padding: 0px 5px;
+        color: white;
+    }
+    #nav1{
+        height: 100px;
+        width: 100%;
+        border: 1px solid transparent;
+        position: relative;
+    }
+    #nav1>.logo{
+        margin: 20px 0 0 0;
+        width: 150px;
+    }
+    #nav1>.nd{
+        height: 10px;
+        position: relative;
+        z-index:1;
+    }
+    #nav1>.nd>.ul0{
+        list-style-type: none;
+        height: 100%;
+        float: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 45px;
+    }
+    #nav1>.nd>.ul0>.li0{
+        float: left;
+        line-height: 52px;
+        margin-left: 30px;
+        position: relative;
+    }
+    #nav1>.nd>.ul0>.li0>a{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.83rem;
+    }
+    #nav1>.nd>.ul0>.li0:hover>a{
+        color: var(--naudo);
+    }
+    /*newsfeed*/
+    #newsfeed{
+        margin: 10px 0;
+        height: 27px;
+        width: 100%;
+    }
+    #newsfeed> .update{
+        height: 100%;
+        line-height: 27px;
+        width: 116px;
+        float: left;
+        background-color: var(--naudo) ;
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    #newsfeed .arrow{
+        height: 0;
+        width: 0;
+        border-left: 12px solid var(--naudo);
+        border-top: 13.5px solid transparent;
+        border-bottom: 13.5px solid transparent;
+        float: left;
+        background: #666666;
+    }
+    #newsfeed> .runningtext{
+        float: left;
+        height: 100%;
+        background: #666666;
+        width: 1042px;
+        overflow: hidden;
+    }
+    #newsfeed> .runningtext>ul{
+        list-style-type: none;
+        height: 100%;
+        white-space: nowrap;
+        position: relative;
+        animation: runningaction 45s infinite;
+        animation-timing-function: linear;
+    }
+    #newsfeed> .runningtext>ul:hover {
+        animation-play-state: paused;
+    }
+    #newsfeed> .runningtext>ul>li{
+        height: 100%;
+        display: inline-block;
+        line-height: 27px;
+        margin-left: 20px;
+        white-space: nowrap;
+    }
+    #newsfeed> .runningtext>ul>li>a{
+        color: white;
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+        @keyframes runningaction{
+        0%{left: 100%;}
+        100%{left: -400%;}
+    }
+    #newsfeed> .runningtext>ul>li:hover a{
+    color: var(--naudo);
+    }
+    /*ul1-1*/
+    #nav1>.nd>.ul0>.li0>.ul1-1{
+        display: none;
+        position: absolute;
+        width: 180%;
+        left: -27px;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-1{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-1>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-1>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-1>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-1>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*ul1-2*/
+    #nav1>.nd>.ul0>.li0>.ul1-2{
+        display: none;
+        position: absolute;
+        width: 120%;
+        left: -12px;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-2{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-2>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-2>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-2>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-2>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*ul1-3*/
+    #nav1>.nd>.ul0>.li0>.ul1-3{
+        display: none;
+        position: absolute;
+        width: 177%;
+        left: -25px;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-3{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-3>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-3>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-3>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-3>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*ul1-4*/
+    #nav1>.nd>.ul0>.li0>.ul1-4{
+        display: none;
+        position: absolute;
+        width: 140%;
+        left: -15px;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-4{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-4>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-4>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-4>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-4>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*ul1-5*/
+    #nav1>.nd>.ul0>.li0>.ul1-5{
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-5{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-5>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-5>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-5>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-5>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*ul1-6*/
+    #nav1>.nd>.ul0>.li0>.ul1-6{
+        display: none;
+        position: absolute;
+        width: 130%;
+        left: -10px;
+        list-style-type: none;
+        margin-top: -1px;
+        border-top: 1px solid var(--naudo);
+    }
+    #nav1>.nd>.ul0>.li0:hover >.ul1-6{
+        display: block;
+        padding-bottom: 5px;
+        background: black;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-6>.li1:hover >.li2{
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-6>.li1{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: grey;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-6>.li1>a{
+        color: grey;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+    #nav1>.nd>.ul0>.li0>.ul1-6>.li1:hover >a{
+        color: var(--naudo);
+    }
+    /*gioi thieu*/
+    #gioithieu>.noti{
+        float: left;
+        position: relative;
+    }
+    #gioithieu>.noti>img{
+        height: 100%;
+        width: 100%;
+    }
+    #gioithieu>.noti>div>a{
+        width: 100%;
+        height: 54px;
+        position: absolute;
+        bottom: 3px;
+        text-decoration: none;
+        font-size: 18px;
+        color: var(--trangxam);
+        font-weight: bold;
+        background: rgba(171,103,43,0.6);
+        text-align: center;
+        padding: 1rem;
+    }
+    #gioithieu>.noti:hover>div>a{
+        color: orange;
+    }
+    /*format bảng*/
+    #gioithieu>table{
+        font-size: 0.75rem;
+        float: right;
+        width: 268px;
+        color: var(--trangxam);
+        background: white;
+    }
+    th{
+        font-size: 1rem;
+        height: 30px;
+        background: var(--naudo);
+        border: 2px solid white;
+        text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    }
+    tr{
+        height: 15px;
+    }
+    .mergerow{
+        background: var(--naudo);
+        text-align: center;
+        font-weight: bold;
+    }
+    .note{
+        color: black;
+        font-weight: normal;
+        background: white;
+    }
+    .no{
+        padding-left: 2px;
+        background: #7d534c;
+    }
+    .c1{
+        padding-left: 2px;
+        font-weight: bold;
+    }
+    td{
+        padding-left: 2px;
+    }
+    /*format mainconten*/
+    #maincontent{
+        width: 882px;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #maincontent>.tieude{
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+        padding-top: 510px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        color: var(--naudo);
+        text-shadow: 0 0 3px var(--naudo), 0 0 3px white;
+    }
+    #maincontent>.mota{
+        padding: 6px 4px 6px 0;
+        height: 231px;
+        color:var(--naudo);
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+        border-bottom: 2px solid white;
+        font-size: 0.8rem;
+    }
+    #maincontent>.mota::-webkit-scrollbar{
+        width: 4px;
+    }
+    #maincontent>.mota::-webkit-scrollbar-thumb{
+        background: var(--naudo);
+        border-radius: 15px;
+    }
+    /*extent*/
+    #extent{
+        height: 150px;
+    }
+    #extent>div{
+        height: 100px;
+        float: left;
+        width: 312.3px;
+        margin-top: 33px;
+        margin-bottom: 33px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #extent>.mot{
+        padding-left: 10px;
+        padding-right: 120px;
+        border-right: 1px dotted #666666;
+    }
+    #extent>.bon{
+        width: 185.3px;
+        padding-left: 10px;
+    }
+    #extent>div>.t{
+        text-transform: uppercase;
+        color: #999999;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    #extent>div>.ct{
+        color: #666666;
+        font-size: 0.8rem;
+    }
+    #extent>div>.xemthem{
+        font-family:Arial, Helvetica, sans-serif;
+        width: 75px;
+        margin-top: 8px;
+        padding-left: 6.8px;
+        padding-top: 6px;
+        border-bottom: 3.8px solid #323232;
+        font-size: 0.73rem;
+        text-transform: uppercase;
+    }
+    #extent>div>.xemthem>a{
+        text-decoration: none;
+        color: #cccccc;
+    }
+    #extent>div:hover .xemthem{
+        color: white;
+        border-bottom: 4px solid var(--naudo);
+        background: #323232;
+    }
+    /*footer*/
+    #footer{
+        margin-top: 10px;
+        height: 150px;
+        letter-spacing: 0.3px;
+    }
+    #footer>div{
+        float: left;
+        line-height: 18px;
+    }
+    #footer>.left{
+        width: 840px;
+        height: 100%;
+        background-color: var(--naudo);
+        padding-top: 20px;
+        padding-left: 10px;
+        color: black;
+    }
+    #footer>.left>p>a{
+        text-decoration: none;
+        color: black;
+    }
+    #footer>.left>.dki{
+        width: 230px;
+    }
+    #footer>.left>.dki:hover a{
+        color: orange;
+        text-decoration: underline;
+    }
+    #footer>.left>.dki:hover span{
+        color:orange;
+    }
+    #footer>.left>.lh{
+        padding-left: 30px;
+    }
+    #footer>.left>.lh>a{
+        text-decoration: none;
+        font-size: 30px;
+        padding-right: 30px;
+        color: black;
+    }
+    #footer>.left>.lh>a:hover span{
+        color: orange;
+    }
+    #footer>.right{
+        width: 330px;
+        height: 100%;
+        background:var(--naudo);
+        color: black;
+        padding-top: 20px;
+    }
+    #footer>.right>.icon{
+        padding-left: 40px;
+        margin-bottom: 10px;
+    }
+    #footer>.right>.icon>a{
+        font-size: 40px;
+        padding: 10px 20px 10px 0;
+        color: black;
+    }
+    #footer>.right>.icon>a:hover span{
+        color: orange;
+    }
+</style>
+<body>
+    <div id="nav1">
+        <div class="logo">
+            <a href="./AOT-WIKI.html"><img src="./img/logo.png" alt=""></a> 
+        </div> 
+        <div class="nd">
+            <ul class="ul0">
+                <li class="li0"><a href="">nhân vật</a>
+                    <ul class="ul1-1">
+                        <li class="li1"><a href="./AOTWIKI-nhanvatchinh.html">Nhân vật chính</a></li>
+                        <li class="li1"><a href="./AOTWIKI-nhanvatkhac.html">Các nhân vật khác</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">titan shifter</a>
+                    <ul class="ul1-2">
+                        <li class="li1"><a href="">Titan Hộ pháp</a></li>
+                        <li class="li1"><a href="">Titan Thiết giáp</a></li>
+                        <li class="li1"><a href="">Titan Tiến công</a></li>
+                        <li class="li1"><a href="">Titan Hình nữ</a></li>
+                        <li class="li1"><a href="">Titan Quái thú</a></li>
+                        <li class="li1"><a href="">Titan Hàm sắt</a></li>
+                        <li class="li1"><a href="">Titan Thủy tổ</a></li>
+                        <li class="li1"><a href="">Titan Ngựa</a></li>
+                        <li class="li1"><a href="">Titan Búa chiến</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">quốc gia</a>
+                    <ul class="ul1-3">
+                        <li class="li1"><a href="">Eldia</a></li>
+                        <li class="li1"><a href="">Marley</a></li>
+                        <li class="li1"><a href="">Các quốc gia khác</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Quân đội</a>
+                    <ul class="ul1-4">
+                        <li class="li1"><a href="">Đội Trinh sát</a>
+                        <li class="li1"><a href="">Đội Đồn trú</a></li>
+                        <li class="li1"><a href="">Đội Cảnh vệ</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Danh sách các mùa</a>
+                    <ul class="ul1-5">
+                        <li class="li1"><a href="">Season 1</a></li>
+                        <li class="li1"><a href="">Season 2</a></li>
+                        <li class="li1"><a href="">Season 3 Part 1</a></li>
+                        <li class="li1"><a href="">Season 3 Part 2</a></li>
+                        <li class="li1"><a href="">Final Season Part 1</a></li>
+                        <li class="li1"><a href="">Final Season Part 2</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Review</a>
+                    <ul class="ul1-6">
+                        <li class="li1"><a href="">Tóm tắt</a></li>
+                        <li class="li1"><a href="">Reviews</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> 
+
+    <div id="newsfeed">
+        <div class="update">Mới cập nhật</div>
+        <div class="arrow"></div>
+        <div class="runningtext">
+            <ul>
+                <li><a href="">Ra mắt trailer Attack on Titan Final Season Part 2</a></li>
+                <li><a href="">MAPPA tiếp tục phụ trách đồ họa cho phần mới nhất của AOT mùa cuối</a></li>
+                <li><a href="">Tác giả tiết lộ một số bí ẩn đằng sau cái kết của Attack on Titan</a></li>
+                <li><a href="">Eren Yeager lot top nhân vật anime nam được yêu thích nhất trong bảng xếp hạng mới nhất của tạp chí Your Husbandos</a></li>
+                <li><a href="./AOTWIKI-Tuyenthanhvien.html">Thông báo tuyển thành viên cho lễ hội cosplay năm 2021</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gioithieu">
+        <div class="noti">
+            <img src="./img/noti.png" alt="">
+            <div class="text"><a href="">Attack on Titan: Final Season Part 1 (Available on Netflix)</a></div>
+        </div>
+        <table>
+            <tr class="mergerow">
+                <th colspan="2"><h3>Đại chiến Titan</h3></th>
+            </tr>
+            <tr>
+                <td class="anh" colspan="2"><img src="./img/imgtable.png" alt=""></td>
+            </tr>
+            <tr class="mergerow">
+                <td class="note" colspan="2"><i>Bìa tiếng Việt của quyển 1 Đại chiến Titan với Eren Yeager chuẩn bị tấn công Titan Đại hình</i></td>
+            </tr>
+            <tr class="mergerow">
+                <td colspan="2">進撃の巨人<br/>(Shingeki no Kyojin)</td>
+            </tr>
+            <tr class="no">
+                <td class="c1" rowspan="3">Thể loại</td>
+                <td>Hành động viễn tưởng</td>
+            </tr>
+            <tr class="no">
+                <td>Kỳ ảo đen tối</td>
+            </tr>
+            <tr class="no">
+                <td>Hậu tận thế</td>
+            </tr>
+            <tr class="mergerow">
+                <td colspan="2">Manga</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Tác giả</td>
+                <td>Isayama Hajime</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Nhà xuất bản</td>
+                <td>Kodansha</td>
+            </tr>
+            <tr class="no">
+                <td class="c1" rowspan="2">Nhà xuất bản tiếng Việt</td>
+                <td>TVN Comics (2014 - 2016)</td>
+            </tr>
+            <tr class="no">
+                <td>Nhà xuất bản trẻ (2021 - nay)</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Đối tượng</td>
+                <td>Thiếu niên</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Ấn hiệu</td>
+                <td>Shōnen Magazine Comics</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Tạp chí</td>
+                <td>Bessatsu Shōnen Magazine</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Đăng tải</td>
+                <td>Ngày 9 tháng 9 năm 2009</td>
+            </tr>
+            <tr class="no">
+                <td class="c1">Số tập</td>
+                <td>34</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="maincontent">
+        <div class="tieude">
+            <p>Giới thiệu</p>
+        </div>
+        <div class="mota">
+            <p>Cốt truyện theo chân Eren Yeager, một chàng trai sống tại quận Shiganshina, nằm ở bức tường ngoài cùng, Tường Maria. Năm 845, Tường Maria bị hai loại Titan mới là Titan Đại hình và Titan Thiết giáp phá thủng. Trong thảm họa đó, mẹ của Eren bị Titan ăn thịt còn Eren thì trốn thoát được. Từ đó anh hứa sẽ xóa sổ mọi Titan trên thế giới và đăng ký gia nhập quân đội cũng với những người bạn từ thuở nhỏ của mình, Mikasa Ackerman và Armin Arlert.</p>
+            </br>
+            <p>Trong cuộc chiến đầu tiên của họ, Eren nhận ra được rằng bản thân có khả năng bí ẩn giúp anh biến đổi thành một Titan có tri giác, điều này khiến Quân Trinh sát chú ý và nảy ra ý định sử dụng sức mạnh Titan của Eren để chiếm lại Tường Maria. Khi những cuộc chiến với Titan ngày càng trở nên khốc liệt, Eren và đồng đội của anh phải chiến đấu để bảo vệ chủ quyền cũng như dần hé mở những bí ẩn về Titan, về nền văn minh của mình và những thứ nằm bên ngoài bức tường.</p>
+            </br>
+            <p>Cuối cùng, Eren và đồng đội khám phá ra rằng họ không phải là những con người duy nhất còn sót lại. Họ là những người thuộc chủng tộc Eldia đã bị đày vào sau những bức tường vì những tội lỗi đã gây ra với chủng tộc khác, tộc người Marley trong quá khứ. Tất cả những thứ xung quanh mà họ từng tin là cả thế giới thực ra chỉ là một hòn đảo bị cô lập tương đối nhỏ tên là Paradis. Người Eldia, với sự lãnh đạo của Eren và những sĩ quan khác, bắt đầu cuộc nổi dậy chống lại hạm đội toàn cầu với mục đích tiêu diệt Paradis của người Marley. Eren bắt đầu phát động Rung chấn, một sự kiện giải phóng hàng triệu Titan Đại hình nằm trong những bức tường trên đảo Paradis để san phẳng thế giới và tạo nên một nền hòa bình vĩnh cửu cho nhân dân Paradis.</p>
+            </br>
+            <p>Với sự giúp sức của những người nắm giữ sức mạnh Titan đến từ Marley, Quân Trinh sát ngăn chặn Rung chấn, nhưng thảm họa đã quét sạch 80% dân số nhân loại. Mikasa giết Eren, vĩnh viễn xóa sạch sức mạnh Titan trên toàn cầu. Ba năm sau, cuộc chiến giữa những cư dân trên đảo và những nước còn lại chuẩn bị nổ ra, nhưng Armin tin rằng những cuộc đàm phán hòa bình của Nữ hoàng Historia sẽ thành công. Nhiều thế hệ sau, Paradis bị những quốc gia khác rải bom và phá hủy. Một cậu bé phát hiện và tiếp cận một cây đại thụ, giống với cái cây là nguồn gốc của sức mạnh Titan đã cứu nô lệ Ymir hàng ngàn năm trước.</p>
+        </div>
+    </div>
+
+    <div id="extent">
+        <div class="mot">
+            <p class="t">Đặt mua goods</p>
+            <p class="ct">AOT Vietnam Fandom hỗ trợ đặt mua ấn phẩm và áo thun tại Website chính hãng Nhật Bản.</p>
+            <p class="xemthem"><a href="">Xem thêm</a></p>
+        </div>
+        <div class="mot">
+            <p class="t">Lễ hội Cosplay</p>
+            <p class="ct">Tổ chức thường niên tại khuôn viên trường Đại học Kinh tế quốc dân vào 13/08.</p>
+            <p class="xemthem"><a href="">Xem thêm</a></p>
+        </div>
+        <div class="mot">
+            <p class="t">Donate</p>
+            <p class="ct">Fandom nhận donate từ thành viên để chủ trì các sự kiện offline định kỳ mỗi quý.</p>
+            <p class="xemthem"><a href="">Xem thêm</a></p>
+        </div>
+        <div class="bon">
+            <p class="t">Tuyển Thành viên</p>
+            <p class="ct">Thông báo tuyển thành viên gia nhập ban tổ chức cho mùa lễ hội Cosplay năm 2021.</p>
+            <p class="xemthem"><a href="./AOTWIKI-Tuyenthanhvien.html">Xem thêm</a></p>
+        </div>
+    </div>
+
+    <div id="footer">
+       <div class="left">
+           <p style="font-size: 1.1rem;letter-spacing: 0.05px;">Tham gia<b> Cộng đồng Fandom Attack on Titan </b>tại Việt Nam</p>
+           <p class="dki"><span class='fa fa-bell' style="font-size: 20px;"></span> &nbsp <a href="">Đăng ký nhận thông báo</a></p>
+           <p style="margin-bottom: 8px;">Có thêm câu hỏi hãy liên hệ với chúng tôi</p>
+           <div class="lh">
+               <a href=""><span class="fa fa-telegram"></span></a>
+               <a href=""><span class="fa fa-wechat"></span></a>
+               <a href=""><span class="fa fa-commenting"></span></a>
+           </div>
+           <p style="margin-top: 15px">Copyright © 2021 - Vu Thi Tuyet Thu. All Rights Reversed.</p>
+       </div>
+       <div class="right">
+           <p style="text-transform: uppercase;margin-bottom:5px;"><b>Liên hệ</b></p>
+           <p style="margin-bottom: 10px;">AOT Vietnam Fandom Community</p>
+           <div class="icon">
+                <a href=""><span class="fa fa-google-plus-square"></span></a>
+                <a href=""><span class="fa fa-facebook-square"></span></a>
+                <a href=""><span class="fa fa-instagram"></span></a>
+            </div>
+           <p>Designed and Developed by Thu</p>
+       </div>
+    </div>
+</body>
+</html>

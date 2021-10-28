@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tuyển thành viên</title>
+</head>
+<style>
+:root{
+    --naudo: #681318;
+    --domau: #d83627;
+    --trangxam: #dedede;
+}
+*{/*reset css*/
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    background: black;
+    width: 1280px;
+    font-family:sans-serif;
+    font-size: 16px;
+}
+body{
+    width:1182px;
+    margin: 0px auto;
+    padding: 0px 5px;
+    color: white;
+}
+#nav1{
+    height: 100px;
+    width: 100%;
+    border: 1px solid transparent;
+    position: relative;
+}
+#nav1>.logo{
+    margin: 20px 0 0 0;
+    width: 150px;
+}
+#nav1>.nd{
+    height: 10px;
+    position: relative;
+    z-index:1;
+}
+#nav1>.nd>.ul0{
+    list-style-type: none;
+    height: 100%;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 45px;
+}
+#nav1>.nd>.ul0>.li0{
+    float: left;
+    line-height: 52px;
+    margin-left: 30px;
+    position: relative;
+}
+#nav1>.nd>.ul0>.li0>a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.83rem;
+}
+#nav1>.nd>.ul0>.li0:hover>a{
+    color: var(--naudo);
+}
+/*newsfeed*/
+#newsfeed{
+    margin: 10px 0;
+    height: 27px;
+    width: 100%;
+}
+#newsfeed> .update{
+    height: 100%;
+    line-height: 27px;
+    width: 116px;
+    float: left;
+    background-color: var(--naudo) ;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: bold;
+}
+#newsfeed .arrow{
+    height: 0;
+    width: 0;
+    border-left: 12px solid var(--naudo);
+    border-top: 13.5px solid transparent;
+    border-bottom: 13.5px solid transparent;
+    float: left;
+    background: #666666;
+}
+#newsfeed> .runningtext{
+    float: left;
+    height: 100%;
+    background: #666666;
+    width: 1042px;
+    overflow: hidden;
+}
+#newsfeed> .runningtext>ul{
+    list-style-type: none;
+    height: 100%;
+    white-space: nowrap;
+    position: relative;
+    animation: runningaction 35s infinite;
+    animation-timing-function: linear;
+}
+#newsfeed> .runningtext>ul:hover {
+    animation-play-state: paused;
+}
+ #newsfeed> .runningtext>ul>li{
+    height: 100%;
+    display: inline-block;
+    line-height: 27px;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+#newsfeed> .runningtext>ul>li>a{
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+@keyframes runningaction{
+    0%{left: 100%;}
+    100%{left: -400%;}
+}
+#newsfeed> .runningtext>ul>li:hover a{
+    color: var(--naudo);
+}
+/*ul1-1*/
+#nav1>.nd>.ul0>.li0>.ul1-1{
+    display: none;
+    position: absolute;
+    width: 180%;
+    left: -27px;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-1{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-1>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-1>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-1>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-1>.li1:hover >a{
+    color: var(--naudo);
+}
+/*ul1-2*/
+#nav1>.nd>.ul0>.li0>.ul1-2{
+    display: none;
+    position: absolute;
+    width: 120%;
+    left: -12px;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-2{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-2>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-2>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-2>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-2>.li1:hover >a{
+    color: var(--naudo);
+}
+/*ul1-3*/
+#nav1>.nd>.ul0>.li0>.ul1-3{
+    display: none;
+    position: absolute;
+    width: 177%;
+    left: -25px;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-3{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-3>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-3>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-3>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-3>.li1:hover >a{
+    color: var(--naudo);
+}
+/*ul1-4*/
+#nav1>.nd>.ul0>.li0>.ul1-4{
+    display: none;
+    position: absolute;
+    width: 140%;
+    left: -15px;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-4{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-4>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-4>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-4>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-4>.li1:hover >a{
+    color: var(--naudo);
+}
+/*ul1-5*/
+#nav1>.nd>.ul0>.li0>.ul1-5{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-5{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-5>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-5>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-5>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-5>.li1:hover >a{
+    color: var(--naudo);
+}
+/*ul1-6*/
+#nav1>.nd>.ul0>.li0>.ul1-6{
+    display: none;
+    position: absolute;
+    width: 130%;
+    left: -10px;
+    list-style-type: none;
+    margin-top: -1px;
+    border-top: 1px solid var(--naudo);
+}
+#nav1>.nd>.ul0>.li0:hover >.ul1-6{
+    display: block;
+    padding-bottom: 5px;
+    background: black;
+}
+#nav1>.nd>.ul0>.li0>.ul1-6>.li1:hover >.li2{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#nav1>.nd>.ul0>.li0>.ul1-6>.li1{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: grey;
+}
+#nav1>.nd>.ul0>.li0>.ul1-6>.li1>a{
+    color: grey;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+#nav1>.nd>.ul0>.li0>.ul1-6>.li1:hover >a{
+    color: var(--naudo);
+}
+/*banner*/
+#banner{
+    position: relative;
+}
+#banner>.cover{
+    width: 1172px;
+    height: 270px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.45;
+}
+#banner>.text{
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--naudo);
+    text-shadow: 0 0 3px var(--naudo), 0 0 3px white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*maincontent*/
+#maincontent>.tieude{
+    font-size: 1.8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--naudo);
+    border-bottom: 1px solid var(--naudo);
+}
+#maincontent>.left{
+    float: left;
+    width: 600px;
+}
+#maincontent>.left>div>h3{
+    width: 250px;
+    margin-bottom: 10px;
+    color: var(--naudo);
+    border-bottom: 4px solid #666666;
+    padding-top: 10px;
+}
+#maincontent>.left>div>p{
+    color: #999999;
+    font-size: 0.9rem;
+    padding: 5px 0;
+}
+#maincontent>.left>div>ul{
+    list-style-type: none;
+}
+#maincontent>.left>div>ul>li{
+    color: #999999;
+    font-size: 0.7rem;
+    padding-left: 10px;
+    text-align: justify;
+}
+#maincontent>.right{
+    width: 550px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid var(--naudo);
+    float: left;
+}
+#maincontent>.right>.tittle{
+    font-size: 1.3rem;
+    width: 270px;
+    text-align: center;
+    margin: 10px 0;
+    color: #999999;
+    font-weight: bold;
+    border-bottom: 2px solid #999999;
+    margin-left: 130px;
+}
+#maincontent>.right>.bot{
+    margin-top:20px;
+    color: var(--domau);
+}
+/*footer*/
+#footer{
+    margin-top: 10px;
+    height: 150px;
+    letter-spacing: 0.3px;
+}
+#footer>div{
+    float: left;
+    line-height: 18px;
+}
+#footer>.left{
+    width: 840px;
+    height: 100%;
+    background-color: var(--naudo);
+    padding-top: 20px;
+    padding-left: 10px;
+    color: black;
+}
+#footer>.left>p>a{
+    text-decoration: none;
+    color: black;
+}
+#footer>.left>.dki{
+    width: 230px;
+}
+#footer>.left>.dki:hover a{
+    color: orange;
+    text-decoration: underline;
+}
+#footer>.left>.dki:hover span{
+    color:orange;
+}
+#footer>.left>.lh{
+    padding-left: 30px;
+}
+#footer>.left>.lh>a{
+    text-decoration: none;
+    font-size: 30px;
+    padding-right: 30px;
+    color: black;
+}
+#footer>.left>.lh>a:hover span{
+    color: orange;
+}
+#footer>.right{
+    width: 330px;
+    height: 100%;
+    background:var(--naudo);
+    color: black;
+    padding-top: 20px;
+}
+#footer>.right>.icon{
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+#footer>.right>.icon>a{
+    font-size: 40px;
+    padding: 10px 20px 10px 0;
+    color: black;
+}
+#footer>.right>.icon>a:hover span{
+    color: orange;
+}
+</style>
+<body>
+    <div id="nav1">
+        <div class="logo">
+            <a href="./AOT-WIKI.html"><img src="./img/logo.png" alt=""></a> 
+        </div> 
+        <div class="nd">
+            <ul class="ul0">
+                <li class="li0"><a href="">nhân vật</a>
+                    <ul class="ul1-1">
+                        <li class="li1"><a href="./AOTWIKI-nhanvatchinh.html">Nhân vật chính</a></li>
+                        <li class="li1"><a href="./AOTWIKI-nhanvatkhac.html">Các nhân vật khác</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">titan shifter</a>
+                    <ul class="ul1-2">
+                        <li class="li1"><a href="">Titan Hộ pháp</a></li>
+                        <li class="li1"><a href="">Titan Thiết giáp</a></li>
+                        <li class="li1"><a href="">Titan Tiến công</a></li>
+                        <li class="li1"><a href="">Titan Hình nữ</a></li>
+                        <li class="li1"><a href="">Titan Quái thú</a></li>
+                        <li class="li1"><a href="">Titan Hàm sắt</a></li>
+                        <li class="li1"><a href="">Titan Thủy tổ</a></li>
+                        <li class="li1"><a href="">Titan Ngựa</a></li>
+                        <li class="li1"><a href="">Titan Búa chiến</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">quốc gia</a>
+                    <ul class="ul1-3">
+                        <li class="li1"><a href="">Eldia</a></li>
+                        <li class="li1"><a href="">Marley</a></li>
+                        <li class="li1"><a href="">Các quốc gia khác</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Quân đội</a>
+                    <ul class="ul1-4">
+                        <li class="li1"><a href="">Đội Trinh sát</a>
+                        <li class="li1"><a href="">Đội Đồn trú</a></li>
+                        <li class="li1"><a href="">Đội Cảnh vệ</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Danh sách các mùa</a>
+                    <ul class="ul1-5">
+                        <li class="li1"><a href="">Season 1</a></li>
+                        <li class="li1"><a href="">Season 2</a></li>
+                        <li class="li1"><a href="">Season 3 Part 1</a></li>
+                        <li class="li1"><a href="">Season 3 Part 2</a></li>
+                        <li class="li1"><a href="">Final Season Part 1</a></li>
+                        <li class="li1"><a href="">Final Season Part 2</a></li>
+                    </ul>
+                </li>
+                <li class="li0"><a href="">Review</a>
+                    <ul class="ul1-6">
+                        <li class="li1"><a href="">Tóm tắt</a></li>
+                        <li class="li1"><a href="">Reviews</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div> 
+    
+    <div id="banner">
+        <img src="./img/banner4.png" alt="">
+        <div class="cover"></div>
+        <div class="text">
+            <p>Join us,</p>
+            <p>have fun with us!</p>
+        </div>
+    </div>
+
+    <div id="newsfeed">
+        <div class="update">Mới cập nhật</div>
+        <div class="arrow"></div>
+        <div class="runningtext">
+            <ul>
+                <li><a href="">Ra mắt trailer Attack on Titan Final Season Part 2</a></li>
+                <li><a href="">MAPPA tiếp tục phụ trách đồ họa cho phần mới nhất của AOT mùa cuối</a></li>
+                <li><a href="">Tác giả tiết lộ một số bí ẩn đằng sau cái kết của Attack on Titan</a></li>
+                <li><a href="">Eren Yeager lot top nhân vật anime nam được yêu thích nhất trong bảng xếp hạng mới nhất của tạp chí Your Husbandos</a></li>
+                <li><a href="./AOTWIKI-Tuyenthanhvien.html">Thông báo tuyển thành viên cho lễ hội cosplay năm 2021</a></li>
+            </ul>
+        </div>
+    </div> 
+
+    <div id="maincontent">
+        <div class="tieude">
+            <p>AOT Cosplay Festival</p>
+            <p>- Tuyển thành viên -</p>
+        </div>
+        <div class="left">
+            <div class="truyenthong">
+                <h3>1. CTV Truyền thông</h3>
+                <p>Số lượng: 13</p>
+                <p>Quyền lợi
+                    <ul>
+                        <li>Môi trường làm việc linh hoạt, văn minh, cởi mở, được tiếp xúc với những người bạn có chung sở thích</li>
+                        <li>Được miễn phí vé tham gia chương trình và được tặng 2 vé cho người thân hoặc bạn bè</li>
+                        <li>Được tặng random good sau khi kết thúc công việc</li>
+                    </ul>
+                </p>
+                <p>Yêu cầu
+                    <ul>
+                        <li>Ưu tiên ứng viên đã từng có kinh nghiệm làm việc hoặc theo học trong lĩnh vực truyền thông</li>
+                        <li>Nếu chưa có kinh nghiệm, sẽ được đào tạo</li>
+                        <li>Nhanh nhẹn, linh hoạt, yêu thích công việc trong lĩnh vực truyền thông, muốn được học hỏi và gắn bó với công việc trong lĩnh vực này</li>
+                        <li>Có kĩ năng sử dụng tin học văn phòng (Words, Excel, Powerpoint, Google drive), có thể sử dụng các phần mềm chỉnh sửa ảnh và thiết kế (Photoshop, AI) ở mức cơ bản</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="nhansu">
+                <h3>2. CTV Nhân sự</h3>
+                <p>Số lượng: 5</p>
+                <p>Quyền lợi
+                    <ul>
+                        <li>Môi trường làm việc linh hoạt, văn minh, cởi mở, được tiếp xúc với những người bạn có chung sở thích</li>
+                        <li>Được miễn phí vé tham gia chương trình và được tặng 2 vé cho người thân hoặc bạn bè</li>
+                        <li>Được tặng random good sau khi kết thúc công việc</li>
+                    </ul>
+                </p>
+                <p>Yêu cầu
+                    <ul>
+                        <li>Ưu tiên ứng viên đã từng có kinh nghiệm làm việc hoặc theo học trong lĩnh vực truyền thông</li>
+                        <li>Nếu chưa có kinh nghiệm, sẽ được đào tạo</li>
+                        <li>Nhanh nhẹn, linh hoạt, yêu thích công việc trong lĩnh vực truyền thông, muốn được học hỏi và gắn bó với công việc trong lĩnh vực này</li>
+                        <li>Có kĩ năng sử dụng tin học văn phòng (Words, Excel, Powerpoint, Google drive), có thể sử dụng các phần mềm chỉnh sửa ảnh và thiết kế (Photoshop, AI) ở mức cơ bản</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="tcsk">
+                <h3>3. CTV Tổ chức sự kiện</h3>
+                <p>Số lượng: 20</p>
+                <p>Quyền lợi
+                    <ul>
+                        <li>Môi trường làm việc linh hoạt, văn minh, cởi mở, được tiếp xúc với những người bạn có chung sở thích</li>
+                        <li>Được miễn phí vé tham gia chương trình và được tặng 2 vé cho người thân hoặc bạn bè</li>
+                        <li>Được tặng random good sau khi kết thúc công việc</li>
+                    </ul>
+                </p>
+                <p>Yêu cầu
+                    <ul>
+                        <li>Ưu tiên ứng viên đã từng có kinh nghiệm làm việc hoặc theo học trong lĩnh vực truyền thông</li>
+                        <li>Nếu chưa có kinh nghiệm, sẽ được đào tạo</li>
+                        <li>Nhanh nhẹn, linh hoạt, yêu thích công việc trong lĩnh vực truyền thông, muốn được học hỏi và gắn bó với công việc trong lĩnh vực này</li>
+                        <li>Có kĩ năng sử dụng tin học văn phòng (Words, Excel, Powerpoint, Google drive), có thể sử dụng các phần mềm chỉnh sửa ảnh và thiết kế (Photoshop, AI) ở mức cơ bản</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="tittle"><i>AOT Cosplay Festival 2020</i></div>
+            <div class="r1">
+                <img src="./img/cos4.png" alt="">
+                <img src="./img/cos2.png" alt="">
+                <img src="./img/cos10.jpg" alt="">
+            </div>
+            <div class="bot">
+                <p>Để apply vui lòng gửi CV của bạn về địa chỉ email: <i>aotvn@fandom.vn.com</i></p>
+                <p>Tiêu đề email: <i>CTV_vị-trí-ứng tuyển_Họ-tên</i></p>
+                <p>Cảm ơn các bạn đã quan tâm đến thông tin tuyển dụng của fandom nhé!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="left">
+            <p style="font-size: 1.1rem;letter-spacing: 0.05px;">Tham gia<b> Cộng đồng Fandom Attack on Titan </b>tại Việt Nam</p>
+            <p class="dki"><span class='fa fa-bell' style="font-size: 20px;"></span> &nbsp <a href="">Đăng ký nhận thông báo</a></p>
+            <p style="margin-bottom: 8px;">Có thêm câu hỏi hãy liên hệ với chúng tôi</p>
+            <div class="lh">
+                <a href=""><span class="fa fa-telegram"></span></a>
+                <a href=""><span class="fa fa-wechat"></span></a>
+                <a href=""><span class="fa fa-commenting"></span></a>
+            </div>
+            <p style="margin-top: 15px">Copyright © 2021 - Vu Thi Tuyet Thu. All Rights Reversed.</p>
+        </div>
+        <div class="right">
+            <p style="text-transform: uppercase;margin-bottom:5px;"><b>Liên hệ</b></p>
+            <p style="margin-bottom: 10px;">AOT Vietnam Fandom Community</p>
+            <div class="icon">
+                 <a href=""><span class="fa fa-google-plus-square"></span></a>
+                 <a href=""><span class="fa fa-facebook-square"></span></a>
+                 <a href=""><span class="fa fa-instagram"></span></a>
+             </div>
+            <p>Designed and Developed by Thu</p>
+        </div>
+     </div>
+</body>
+</html>
